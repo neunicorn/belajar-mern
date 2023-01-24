@@ -12,4 +12,10 @@
 .header .header_logo{
     display: flex;
     align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+.header .header_logo img{
+    margin-right: 10px;
 }

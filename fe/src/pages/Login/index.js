@@ -1,7 +1,7 @@
 import React from "react";
 import { xoxoLove } from "../../assets";
 import { Link } from "react-router-dom";
-import { Button } from "../../components";
+import { Button, Gap } from "../../components";
 
 const Login = () => {
   return (
@@ -9,7 +9,7 @@ const Login = () => {
       <div className="img-container"></div>
       <div className="form-container">
         <h1>Login</h1>
-        <img src={xoxoLove} className="logo-img" />
+        <img src={xoxoLove} alt="logo" className="logo-img" />
         <form>
           <div className="form-group">
             {/* <label htmlFor="username">Username</label> */}
@@ -31,6 +31,7 @@ const Login = () => {
               required
             />
           </div>
+          <Gap height={20} />
           <div className="form-group">
             <Button title="Login" placeholder="login" />
           </div>

@@ -1,0 +1,22 @@
+.home-page-wrapper{
+    padding-top: 20px;
+    overflow: hidden;
+}
+
+.home-page-wrapper .create-blog-wrapper{
+    width: 200px;
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.home-page-wrapper .blog-content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.home-page-wrapper .pagination{
+    max-width: 300px;
+    display: flex;
+    margin: auto;
+}

@@ -1,8 +1,7 @@
 .main-app-container{
     display: flex;
     flex-direction: column;
-    
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .content-main-app{
@@ -10,5 +9,4 @@
     flex: 1;
     margin: auto;
     width: 100%;
-
 }

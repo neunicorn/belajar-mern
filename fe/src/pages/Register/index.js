@@ -1,10 +1,11 @@
 import React from "react";
 import "./register.css";
 import { xoxoLove } from "../../assets";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Button, Gap } from "../../components";
 
 const Register = () => {
+  const navigate = useNavigate();
   return (
     <div className="main-container">
       <div className="img-container"></div>
@@ -64,7 +65,11 @@ const Register = () => {
           </div>
           <Gap height={20} />
           <div className="form-group">
-            <Button title="Register" type="submit" />
+            <Button
+              title="Register"
+              type="submit"
+              onClick={() => navigate("/login")}
+            />
           </div>
         </form>
         <p>

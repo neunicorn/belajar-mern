@@ -1,10 +1,15 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import { Button, Gap, TextArea, Upload } from "../../components";
 import "./createBlog.css";
 
 const CreateBlog = () => {
+  const navigate = useNavigate();
   return (
     <div className="blog-post">
+      <div className="button-back">
+        <Button title={"back"} onClick={() => navigate("/")} />
+      </div>
       <form>
         <h3 className="create-title">Create New Blog Post</h3>
         <div className="title-create">

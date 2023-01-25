@@ -1,10 +1,12 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import { RegisterBg } from "../../../assets";
 import "./blogItem.css";
 
 const BlogItem = () => {
+  const navigation = useNavigate();
   return (
-    <div className="blog-item">
+    <div className="blog-item" onClick={() => navigation("/detail-blog")}>
       <img className="img-thumb" src={RegisterBg} alt="thumbnail" />
       <div className="content-detail">
         <p className="title">Title</p>

@@ -1,9 +1,10 @@
 import React from "react";
 import { xoxoLove } from "../../assets";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Button, Gap } from "../../components";
 
 const Login = () => {
+  const navigate = useNavigate();
   return (
     <div className="main-container">
       <div className="img-container"></div>
@@ -33,7 +34,11 @@ const Login = () => {
           </div>
           <Gap height={20} />
           <div className="form-group">
-            <Button title="Login" placeholder="login" />
+            <Button
+              title="Login"
+              placeholder="login"
+              onClick={() => navigate("/")}
+            />
           </div>
         </form>
         <p>

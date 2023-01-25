@@ -20,4 +20,13 @@
 
 .header .header_logo img{
     margin-right: 10px;
+    cursor: pointer;
+}
+.header .header_logo h2{
+    cursor: pointer;
+}
+
+.header .header_nav{
+    text-decoration: underline;
+    cursor: pointer;
 }

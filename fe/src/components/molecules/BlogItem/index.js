@@ -9,7 +9,12 @@ const BlogItem = () => {
       <div className="content-detail">
         <p className="title">Title</p>
         <p className="author">Author - Date post</p>
-        <p className="body">lorem ipsum sidolor amet</p>
+        <p className="body">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lacinia
+          velit condimentum diam viverra hendrerit. Nunc nec ligula ut risus
+          fringilla lacinia euismod sed leo. Nunc rhoncus lacus quis ipsum
+          ultrices ornare.
+        </p>
       </div>
     </div>
   );

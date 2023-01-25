@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { Button, BlogItem, Gap } from "../../components";
 import "./home.css";
 
@@ -6,7 +7,9 @@ const Home = () => {
   return (
     <div className="home-page-wrapper">
       <div className="create-blog-wrapper">
-        <Button title="CREATE BLOG" />
+        <Link to={"/create-blog"}>
+          <Button title="CREATE BLOG" />
+        </Link>
       </div>
       <Gap height={20} />
       <div className="blog-content">

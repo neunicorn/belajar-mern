@@ -1,5 +1,6 @@
 import React from "react";
 import "./footer.css";
+import { Link } from "react-router-dom";
 import {
   ICFacebook,
   ICYoutube,
@@ -25,10 +26,18 @@ const Footer = () => {
             <img src={xoxoLove} alt="logo" width={100} />
           </div>
           <div className="icon-png">
-            <Icon img={ICFacebook} />
-            <Icon img={ICTwitter} />
-            <Icon img={ICYoutube} />
-            <Icon img={ICInstagram} />
+            <a href="https://www.youtube.com/" target="_blank">
+              <Icon img={ICYoutube} />
+            </a>
+            <a href="https://www.instagram.com/" target="_blank">
+              <Icon img={ICInstagram} />
+            </a>
+            <a href="https://www.twitter.com/" target="_blank">
+              <Icon img={ICTwitter} />
+            </a>
+            <a href="https://www.facebook.com/" target="_blank">
+              <Icon img={ICFacebook} />
+            </a>
           </div>
         </div>
       </div>

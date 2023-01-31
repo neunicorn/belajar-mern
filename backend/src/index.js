@@ -2,7 +2,6 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 
-const productRoute = require("./routes/api/products");
 const authRoute = require("./routes/api/auth");
 const blogRoute = require("./routes/api/blog");
 
@@ -16,7 +15,7 @@ app.use((req, res, next) => {
   res.setHeader("Access-Control-Allow-Origin", "*");
   res.setHeader(
     "Access-Control-Allow-Methods",
-    "GET, POST, PUT, PATCH, DELETE"
+    "GET, POST, PUT, PATCH, DELETE, PATCH"
   );
   res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
   next();
@@ -24,6 +23,18 @@ app.use((req, res, next) => {
 
 app.use("/v1/auth/", authRoute);
 app.use("/v1/blog", blogRoute);
+
+app.use((err, req, res, next) => {
+  const message = err.message;
+  const status = err.statusCode || 500;
+  const data = err.data;
+
+  res.status(status).json({
+    status,
+    message,
+    data,
+  });
+});
 
 const port = 4000;
 app.listen(port, () => {

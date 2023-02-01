@@ -1,5 +1,5 @@
 const { validationResult } = require("express-validator");
-const { nanoid } = require("nanoid");
+const User = require("../model/user");
 
 const register = (req, res, next) => {
   const { name, email, username, password } = req.body;
